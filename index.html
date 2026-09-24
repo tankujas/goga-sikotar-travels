@@ -1,0 +1,1296 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Goga Sikotar Travels | Surat to Dwarka</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff9966,
+                    #ff5e62,
+                    #8e2de2,
+                    #4facfe
+                );
+
+            color: #222;
+        }
+
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #141e30,
+                    #6a11cb,
+                    #dd2476
+                );
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,.4);
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffe600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul a:hover {
+            color: #ffe600;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 720px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,81,47,.88),
+                    rgba(221,36,118,.85),
+                    rgba(106,17,203,.90)
+                );
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 62px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #ffe600;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+
+        /* ================= ORIGINAL PHOTO ================= */
+
+        .bus-photo {
+            width: 90%;
+            max-width: 900px;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            margin: 30px auto;
+
+            display: block;
+
+            border-radius: 30px;
+
+            border: 7px solid white;
+
+            box-shadow:
+                0 18px 45px rgba(0,0,0,.5);
+        }
+
+        .photo-text {
+            font-size: 14px;
+            opacity: .9;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .btn {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            margin: 20px 7px;
+
+            border-radius: 30px;
+
+            background: #ffe600;
+
+            color: #222;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.3);
+        }
+
+
+        /* ================= COMMON ================= */
+
+        section {
+            padding: 80px 7%;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .title h2 {
+            font-size: 42px;
+            color: #6a11cb;
+        }
+
+        .title p {
+            color: #dd2476;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+
+        /* ================= ROUTE ================= */
+
+        .route {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff3a3,
+                    #ffd6e8,
+                    #c8f7ff
+                );
+        }
+
+        .route-box {
+            max-width: 1000px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            display: flex;
+
+            justify-content: space-around;
+
+            align-items: center;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.2);
+        }
+
+        .city {
+            text-align: center;
+        }
+
+        .city-icon {
+            font-size: 55px;
+        }
+
+        .city h3 {
+            font-size: 30px;
+            color: #dd2476;
+            margin: 10px;
+        }
+
+        .route-middle {
+            width: 35%;
+            text-align: center;
+        }
+
+        .bus {
+            font-size: 45px;
+        }
+
+        .route-line {
+            height: 6px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff512f,
+                    #dd2476,
+                    #6a11cb
+                );
+
+            border-radius: 10px;
+
+            margin: 12px 0;
+        }
+
+
+        /* ================= DETAILS ================= */
+
+        .details {
+            background:
+                linear-gradient(
+                    135deg,
+                    #141e30,
+                    #243b55,
+                    #6a11cb
+                );
+
+            color: white;
+        }
+
+        .details .title h2 {
+            color: white;
+        }
+
+        .details .title p {
+            color: #ffe600;
+        }
+
+        .cards {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4,1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff512f,
+                    #dd2476,
+                    #6a11cb
+                );
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,.35);
+        }
+
+        .card .icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #ffe600;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+        /* ================= SERVICES ================= */
+
+        .services {
+            background:
+                linear-gradient(
+                    135deg,
+                    #e0f7ff,
+                    #f9dfff,
+                    #fff2b8
+                );
+        }
+
+        .service {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 22px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.15);
+
+            border-top: 6px solid #dd2476;
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #6a11cb;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* ================= BOOKING ================= */
+
+        .booking {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd1dc,
+                    #d9c8ff,
+                    #bff5ff
+                );
+        }
+
+        .booking-box {
+            max-width: 900px;
+
+            margin: auto;
+
+            padding: 40px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.2);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .input {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #6a11cb;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            padding: 14px;
+
+            border: 2px solid #ddd;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-size: 15px;
+        }
+
+        textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .submit {
+            width: 100%;
+
+            padding: 16px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ff512f,
+                    #dd2476,
+                    #6a11cb
+                );
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff1eb,
+                    #f0e5ff,
+                    #dffaff
+                );
+        }
+
+        .contact-card {
+            background: white;
+
+            padding: 30px 20px;
+
+            text-align: center;
+
+            border-radius: 22px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.15);
+        }
+
+        .contact-card .icon {
+            font-size: 45px;
+        }
+
+        .contact-card h3 {
+            color: #dd2476;
+            margin: 12px;
+        }
+
+        .contact-card a {
+            color: #6a11cb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background:
+                linear-gradient(
+                    90deg,
+                    #141e30,
+                    #6a11cb,
+                    #dd2476
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 40px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+
+        /* ================= WHATSAPP ================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 62px;
+            height: 62px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+
+            background: #25d366;
+
+            color: white;
+
+            font-size: 30px;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.3);
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .bus-photo {
+                height: 260px;
+            }
+
+            .route-box {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .route-middle {
+                width: 70%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media(max-width:500px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .booking-box {
+                padding: 25px 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <div class="logo">
+            🚌 Goga
+            <span>Sikotar</span>
+            Travels
+        </div>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#route">Route</a></li>
+
+            <li><a href="#details">Price</a></li>
+
+            <li><a href="#booking">Booking</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Goga
+                <span>Sikotar</span>
+                Travels
+            </h1>
+
+            <h2>
+                🚌 Surat → Dwarka
+            </h2>
+
+            <p>
+                2+1 Sleeper AC Bus Service
+            </p>
+
+
+            <!--
+                PUT YOUR ORIGINAL GOGA SIKOTAR BUS PHOTO
+                IN THE SAME FOLDER AS THIS HTML FILE.
+
+                PHOTO NAME:
+                goga-sikotar-sleeper.jpg
+            -->
+
+            <img
+                src="goga-sikotar-sleeper.jpg"
+                alt="Original Goga Sikotar Sleeper Bus"
+                class="bus-photo"
+            >
+
+            <p class="photo-text">
+                Goga Sikotar Travels – Sleeper Bus
+            </p>
+
+
+            <a
+                href="#booking"
+                class="btn">
+
+                🎫 Book Your Ticket
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="btn">
+
+                📞 Contact Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ROUTE ================= -->
+
+    <section class="route" id="route">
+
+        <div class="title">
+
+            <p>
+                MAIN ROUTE
+            </p>
+
+            <h2>
+                Surat
+                <span>→</span>
+                Dwarka
+            </h2>
+
+        </div>
+
+
+        <div class="route-box">
+
+            <div class="city">
+
+                <div class="city-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Surat
+                </h3>
+
+                <p>
+                    Gujarat
+                </p>
+
+            </div>
+
+
+            <div class="route-middle">
+
+                <div class="bus">
+                    🚌
+                </div>
+
+                <div class="route-line"></div>
+
+                <b>
+                    Direct Sleeper Route
+                </b>
+
+            </div>
+
+
+            <div class="city">
+
+                <div class="city-icon">
+                    🛕
+                </div>
+
+                <h3>
+                    Dwarka
+                </h3>
+
+                <p>
+                    Gujarat
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRICE / DETAILS ================= -->
+
+    <section class="details" id="details">
+
+        <div class="title">
+
+            <p>
+                TRAVEL INFORMATION
+            </p>
+
+            <h2>
+                Bus <span>Details</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">
+                    🚌
+                </div>
+
+                <h3>
+                    Bus Type
+                </h3>
+
+                <p>
+                    2+1 Sleeper AC
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💺
+                </div>
+
+                <h3>
+                    Seats
+                </h3>
+
+                <p>
+                    37 Seats
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🛣️
+                </div>
+
+                <h3>
+                    Route
+                </h3>
+
+                <p>
+                    Surat → Dwarka
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💰
+                </div>
+
+                <h3>
+                    Fare
+                </h3>
+
+                <p>
+                    From ₹700*
+                </p>
+
+            </div>
+
+        </div>
+
+        <p style="text-align:center;margin-top:25px;">
+            *Fare can vary according to boarding point and booking date.
+        </p>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <div class="title">
+
+            <p>
+                OUR SERVICES
+            </p>
+
+            <h2>
+                Why Choose <span>Us?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="service">
+
+                <div class="service-icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Safe Journey
+                </h3>
+
+                <p>
+                    Comfortable and reliable
+                    sleeper bus travel.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    💺
+                </div>
+
+                <h3>
+                    Sleeper Seats
+                </h3>
+
+                <p>
+                    2+1 sleeper seating
+                    for comfortable travel.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    🎫
+                </div>
+
+                <h3>
+                    Easy Booking
+                </h3>
+
+                <p>
+                    Easy booking and
+                    customer assistance.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">
+                    📞
+                </div>
+
+                <h3>
+                    Customer Support
+                </h3>
+
+                <p>
+                    Contact us for
+                    booking information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING ================= -->
+
+    <section class="booking" id="booking">
+
+        <div class="title">
+
+            <p>
+                RESERVE YOUR SEAT
+            </p>
+
+            <h2>
+                Customer <span>Booking</span>
+            </h2>
+
+        </div>
+
+
+        <div class="booking-box">
+
+            <form>
+
+                <div class="row">
+
+                    <div class="input">
+
+                        <label>
+                            Customer Name
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Enter your full name"
+                            required>
+
+                    </div>
+
+
+                    <div class="input">
+
+                        <label>
+                            Mobile Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Enter mobile number"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="input">
+
+                        <label>
+                            Journey Date
+                        </label>
+
+                        <input
+                            type="date"
+                            required>
+
+                    </div>
+
+
+                    <div class="input">
+
+                        <label>
+                            Passengers
+                        </label>
+
+                        <select>
+
+                            <option>
+                                1 Passenger
+                            </option>
+
+                            <option>
+                                2 Passengers
+                            </option>
+
+                            <option>
+                                3 Passengers
+                            </option>
+
+                            <option>
+                                4 Passengers
+                            </option>
+
+                            <option>
+                                5 Passengers
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input">
+
+                    <label>
+                        Message
+                    </label>
+
+                    <textarea
+                        placeholder="Enter your booking request">
+                    </textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="submit">
+
+                    🎫 Submit Booking Request
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="title">
+
+            <p>
+                GET IN TOUCH
+            </p>
+
+            <h2>
+                Customer <span>Contact</span>
+            </h2>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📞
+                </div>
+
+                <h3>
+                    Call Us
+                </h3>
+
+                <p>
+                    Booking & Enquiry
+                </p>
+
+                <a href="tel:9824359000">
+
+                    98243 59000
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    💬
+                </div>
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+                <p>
+                    Quick Booking
+                </p>
+
+                <a
+                    href="https://wa.me/919824359000"
+                    target="_blank">
+
+                    Chat Now
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    📧
+                </div>
+
+                <h3>
+                    Email
+                </h3>
+
+                <p>
+                    Customer Enquiry
+                </p>
+
+                <a
+                    href="mailto:gogaskikotartravels@gmail.com">
+
+                    gogasikotartravels@gmail.com
+
+                </a>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <div class="icon">
+                    🛕
+                </div>
+
+                <h3>
+                    Destination
+                </h3>
+
+                <p>
+                    Gujarat
+                </p>
+
+                <b>
+                    Surat → Dwarka
+                </b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h2>
+            🚌 Goga Sikotar Travels
+        </h2>
+
+        <p>
+            Surat → Dwarka
+        </p>
+
+        <p>
+            Sleeper AC Bus Service
+        </p>
+
+        <p>
+            © 2026 Goga Sikotar Travels
+        </p>
+
+    </footer>
+
+
+    <!-- ================= WHATSAPP ================= -->
+
+    <a
+        href="https://wa.me/919824359000"
+        target="_blank"
+        class="whatsapp">
+
+        💬
+
+    </a>
+
+
+</body>
+
+</html>
+```
